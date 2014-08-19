@@ -27,6 +27,10 @@
             android:name=".ActivityB"
             android:label="@string/title_activity_activity_b" >
         </activity>
+        <activity
+            android:name=".WelcomeScreen"
+            android:label="@string/title_activity_welcome_screen" >
+        </activity>
     </application>
 
 </manifest>

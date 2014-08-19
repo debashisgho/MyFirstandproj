@@ -2,24 +2,21 @@ package com.example.myfirstandproj;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class ActivityB extends ActionBarActivity {
+public class WelcomeScreen extends ActionBarActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_b);
-		Log.d("DGH", "Welcome to activity B");
-	
+		setContentView(R.layout.activity_welcome_screen);
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.activity_b, menu);
+		getMenuInflater().inflate(R.menu.welcome_screen, menu);
 		return true;
 	}
 

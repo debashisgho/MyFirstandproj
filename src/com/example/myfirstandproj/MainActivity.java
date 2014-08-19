@@ -1,9 +1,16 @@
 package com.example.myfirstandproj;
 
+import java.io.File;
+import java.util.ArrayList;
+
+import org.apache.http.protocol.HTTP;
+
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,13 +20,14 @@ import android.widget.Button;
 
 public class MainActivity extends ActionBarActivity implements OnClickListener {
 
+	private static final String APP_LOG_TAG ="DGH";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		Log.d("DGH", "onCreate() was called");
+		Log.d(APP_LOG_TAG, "onCreate() was called");
 		
-		Button button2 = (Button)findViewById(R.id.button2);
+		Button button2 = (Button)findViewById(R.id.ListenerButton);
 		button2.setOnClickListener(this);
 	}
 
@@ -27,35 +35,35 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 	protected void onPause() {
 		// TODO Auto-generated method stub
 		super.onPause();
-		Log.d("DGH", "onPause() was called");
+		Log.d(APP_LOG_TAG, "onPause() was called");
 	}
 	
 	@Override
 	protected void onStart() {
 		// TODO Auto-generated method stub
 		super.onStart();
-		Log.d("DGH", "onStart() was called");
+		Log.d(APP_LOG_TAG, "onStart() was called");
 	}
 	
 	@Override
 	protected void onStop() {
 		// TODO Auto-generated method stub
 		super.onStop();
-		Log.d("DGH", "onStop() was called");
+		Log.d(APP_LOG_TAG, "onStop() was called");
 	}
 	
 	@Override
 	protected void onRestart() {
 		// TODO Auto-generated method stub
 		super.onRestart();
-		Log.d("DGH", "onRestart() was called");
+		Log.d(APP_LOG_TAG, "onRestart() was called");
 	}
 	
 	@Override
 	protected void onResume() {
 		// TODO Auto-generated method stub
 		super.onResume();
-		Log.d("DGH", "onResume() was called");
+		Log.d(APP_LOG_TAG, "onResume() was called");
 	}
 	
 	@Override
@@ -64,11 +72,11 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 		super.onConfigurationChanged(newConfig);
 		Log.d("DGH", "onConfigChanged() was called");
 		if(newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE){
-			Log.d("DGH", "Welcome to the landscape mode");
+			Log.d(APP_LOG_TAG, "Welcome to the landscape mode");
 		}
 		
 		if(newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
-			Log.d("DGH", "Welcome to the portrait mode");
+			Log.d(APP_LOG_TAG, "Welcome to the portrait mode");
 		}
 	}
 	
@@ -76,25 +84,111 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		Log.d("DGH", "onClick Listener was called");
-		if(v.getId()==R.id.button2){
-			Log.d("DGH", "Button Listener was clicked and method was invoked via onClick listener");
+		if(v.getId()==R.id.ListenerButton){
+			Log.d(APP_LOG_TAG, "Button Listener was clicked and method was invoked via onClick listener");
 		}
 		
 	}
 	
 	public void doSomething(View v){
 		Log.d("DGH", "method doSomething() was called");		
-		if(v.getId()==R.id.button1){
-			Log.d("DGH", "button doSomething was clicked");			
+		if(v.getId()==R.id.doSthBtn){
+			Log.d(APP_LOG_TAG, "button doSomething was clicked");			
 		}
 		
 	}
 	
-	public void goToActivityB(View v) {
-		Log.d("DGH", "button goToActivityB was called");	
-		Intent i = new Intent(this, ActivityB.class);
+	public void goToActivityWelcomeScreen(View v) {
+		Log.d(APP_LOG_TAG, "button to go to welcome activity was called");	
+		Intent i = new Intent(this, WelcomeScreen.class);
 		startActivity(i);
 		
+	}
+	
+	public void launchMap(View v){
+		Intent intent = null;
+		if(v.getId()==R.id.launchMap){
+			intent = new Intent();
+			intent.setAction(android.content.Intent.ACTION_VIEW);
+			Uri location = Uri.parse("geo:0,0?q=1600+Amphitheatre+Parkway,+Mountain+View,+California");
+			intent.setData(location);
+			this.startActivity(intent);
+		}	
+		}
+	public void viewWebpage(View v){
+		Intent intent = null;		
+		if(v.getId()==R.id.viewWebpageButton){
+			Log.d(APP_LOG_TAG, "view webpage button was called");
+			intent = new Intent();
+			intent.setAction(android.content.Intent.ACTION_VIEW);
+			Uri location = Uri.parse("http://www.android.com");
+			intent.setData(location);
+			startActivity(intent);
+		}
+	}
+	
+	public void sendEmail(View v){
+		Intent intent = null;
+		if(v.getId()==R.id.sendEmailButton){
+			intent = new Intent();
+			Log.d(APP_LOG_TAG,"Inside send Email() action");
+			intent.setAction(android.content.Intent.ACTION_SEND);
+			//Uri uri = Uri.parse(uriString)
+			//intent.setData(data);
+			String[] toEmail = {"appdgtech@gmail.com", "debashisgho@gmail.com"};
+			intent.putExtra(Intent.EXTRA_EMAIL,toEmail);
+			intent.putExtra(Intent.EXTRA_SUBJECT, "Email from android app");
+			intent.putExtra(Intent.EXTRA_TEXT, "Hello ! how are you doing. This is a test email from the app");
+			intent.setType(HTTP.PLAIN_TEXT_TYPE);
+			Intent chooser = Intent.createChooser(intent, "Send Email");
+			startActivity(chooser);				
+			
+		}
+	}
+	
+	public void sendImage(View v){
+		Intent intent = null;
+		if(v.getId()==R.id.sendImage){
+			Log.d(APP_LOG_TAG, "sendImage() method started");
+			intent = new Intent();
+			intent.setAction(android.content.Intent.ACTION_SEND);
+			Uri uri = Uri.parse("android.resource://com.example.myfirstandproj/drawable/"+R.drawable.background);
+			intent.setType("image/*");
+			intent.putExtra(Intent.EXTRA_STREAM, uri);
+			intent.putExtra(Intent.EXTRA_TEXT, "Hello ! Here is the image from the android app");
+			Intent chooser = Intent.createChooser(intent, "Send Image using");
+			startActivity(chooser);	
+			
+			
+		}
+	}
+	
+	public void sendMultipleImages(View v){
+		Intent intent = null;
+		if(v.getId()==R.id.SendImages){
+			Log.d(APP_LOG_TAG, "sendMultipleImages() method started");
+			intent = new Intent();
+			intent.setAction(android.content.Intent.ACTION_SEND_MULTIPLE);
+			
+			//File fileDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+			
+			// for some reason directory.list() method is not working, so working with the file name itself.
+			
+			File fileDir = new File(Environment.getExternalStorageDirectory().getPath());
+			Log.d(APP_LOG_TAG, "External storage dir is :"+fileDir.toString());
+					
+			ArrayList<Uri> uris = new ArrayList<Uri>();
+			uris.add(Uri.parse("file://"+fileDir.toString()+"/image1.jpg"));
+			uris.add(Uri.parse("file://"+fileDir.toString()+"/image2.jpg"));
+			
+			intent.setType("image/*");
+			intent.putExtra(Intent.EXTRA_STREAM, uris);
+			intent.putExtra(Intent.EXTRA_TEXT, "Hello ! Here are the images from the android app");
+			Intent chooser = Intent.createChooser(intent, "Send Image using");
+			startActivity(chooser);	
+			
+			
+		}
 	}
 	
 	@Override
