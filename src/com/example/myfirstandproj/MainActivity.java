@@ -2,6 +2,7 @@ package com.example.myfirstandproj;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.zip.Inflater;
 
 import org.apache.http.protocol.HTTP;
 
@@ -12,11 +13,15 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity implements OnClickListener {
 
@@ -189,6 +194,24 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 			
 			
 		}
+	}
+	
+	public void showToast(View v){
+		Toast toast = Toast.makeText(this, "Hello ! How are you ?", Toast.LENGTH_LONG);
+		toast.setGravity(Gravity.CENTER, 20,20);
+		toast.show();
+		
+	}
+	
+	public void showCustomToast(View v){
+		Log.d(APP_LOG_TAG, "inside the showCustomToast() method");
+		Toast toast = new Toast(this);
+		toast.setGravity(Gravity.CENTER, 0, 0);
+		toast.setDuration(Toast.LENGTH_LONG);
+		LayoutInflater inflater= this.getLayoutInflater();
+		View toastView = inflater.inflate(R.layout.custom_toast, (ViewGroup)findViewById(R.id.custom_toast_root_id));
+		toast.setView(toastView);
+		toast.show();
 	}
 	
 	@Override

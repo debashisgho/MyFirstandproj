@@ -110,5 +110,32 @@
             android:onClick="sendMultipleImages" />
 
     </RelativeLayout>
+    
+     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/showToast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/buttonbackground"
+            android:onClick="showToast"
+            android:text="toast"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/buttonbackground"
+            android:onClick="showCustomToast"
+            android:text="customToast"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
  
 </LinearLayout>
