@@ -1,141 +1,143 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ButtonStyle"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:gravity="center_horizontal"
-    android:onClick="viewWebpage"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.myfirstandproj.MainActivity" >
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="5dp" >
-
-        <Button
-            android:id="@+id/doSthBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:background="@drawable/buttonbackground"
-            android:onClick="doSomething"
-            android:text="doSth"
-            android:textColor="#ffffff" />
-
-        <Button
-            android:id="@+id/ListenerButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/buttonbackground"
-            android:text="Listener"
-            android:textColor="#ffffff" />
-
-        <Button
-            android:id="@+id/anotherActivity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:background="@drawable/buttonbackground"
-            android:onClick="goToActivityWelcomeScreen"
-            android:text="Welcome"
-            android:textColor="#ffffff" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="5dp" >
-
-        <Button
-            android:id="@+id/viewWebpageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:background="@drawable/buttonbackground"
-            android:onClick="viewWebpage"
-            android:text="webPage"
-            android:textColor="#ffffff" />
-
-        <Button
-            android:id="@+id/launchMap"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:background="@drawable/buttonbackground"
-            android:onClick="launchMap"
-            android:text="gMap"
-            android:textColor="#ffffff" />
-
-        <Button
-            android:id="@+id/sendEmailButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/buttonbackground"
-            android:onClick="sendEmail"
-            android:text="email"
-            android:textColor="#ffffff" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <Button
-            android:id="@+id/sendImage"
+        <TableRow
+            android:id="@+id/tableRow1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:background="@drawable/buttonbackground"
-            android:onClick="sendImage"
-            android:text="SendImg"
-            android:textColor="#ffffff" />
+            android:layout_height="wrap_content" >
 
-        <Button
-            android:id="@+id/SendImages"
+            <Button
+                android:id="@+id/doSthBtn"
+                style="@style/ButtonStyle"
+                android:onClick="doSomething"
+                android:text="doSth" />
+
+            <Button
+                android:id="@+id/ListenerButton"
+                style="@style/ButtonStyle"
+                android:text="Listener" />
+
+            <Button
+                android:id="@+id/anotherActivity"
+                style="@style/ButtonStyle"
+                android:onClick="goToActivityWelcomeScreen"
+                android:text="Welcome" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:background="@drawable/buttonbackground"
-            android:text="SendImgs"
-            android:textColor="#ffffff"
-            android:onClick="sendMultipleImages" />
+            android:layout_height="wrap_content" >
 
-    </RelativeLayout>
-    
-     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+            <Button
+                android:id="@+id/viewWebpageButton"
+                style="@style/ButtonStyle"
+                android:onClick="viewWebpage"
+                android:text="webPage" />
 
-        <Button
-            android:id="@+id/showToast"
+            <Button
+                android:id="@+id/launchMap"
+                style="@style/ButtonStyle"
+                android:onClick="launchMap"
+                android:text="gMap" />
+
+            <Button
+                android:id="@+id/sendEmailButton"
+                style="@style/ButtonStyle"
+                android:onClick="sendEmail"
+                android:text="email" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:background="@drawable/buttonbackground"
-            android:onClick="showToast"
-            android:text="toast"
-            android:textColor="#ffffff" />
+            android:layout_height="wrap_content" >
 
-        <Button
-            android:id="@+id/button1"
+            <Button
+                android:id="@+id/sendImage"
+                style="@style/ButtonStyle"
+                android:onClick="sendImage"
+                android:text="SendImg" />
+
+            <Button
+                android:id="@+id/SendImages"
+                style="@style/ButtonStyle"
+                android:onClick="sendMultipleImages"
+                android:text="SendImgs" />
+
+            <Button
+                android:id="@+id/showToast"
+                style="@style/ButtonStyle"
+                android:onClick="showToast"
+                android:text="toast" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/buttonbackground"
-            android:onClick="showCustomToast"
-            android:text="customToast"
-            android:textColor="#ffffff" />
+            android:layout_height="wrap_content" >
 
-    </RelativeLayout>
- 
+            <Button
+                android:id="@+id/button1"
+                style="@style/ButtonStyle"
+                android:onClick="showCustomToast"
+                android:text="customToast" />
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/ButtonStyle"
+                android:onClick="goToJavaActivity"
+                android:text="javaActivity" />
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/ButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonbackground"
+                android:onClick="goToActivityFrameLayout"
+                android:text="FrameLayout" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/customFontButton"
+                style="@style/ButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="goToActivityCustomFont"
+                android:text="customFont" />
+
+            <Button
+                android:id="@+id/button4"
+                style="@style/ButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="goToActivityValidation"
+                android:text="Validation" />
+
+        </TableRow>
+
+    </TableLayout>
+
 </LinearLayout>

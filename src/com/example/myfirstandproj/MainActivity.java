@@ -110,6 +110,13 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 		
 	}
 	
+	public void goToJavaActivity(View v){
+		
+		Log.d(APP_LOG_TAG, "button to go to Java activity was called");	
+		Intent i = new Intent(this, JavaActivity.class);
+		startActivity(i);
+	}
+	
 	public void launchMap(View v){
 		Intent intent = null;
 		if(v.getId()==R.id.launchMap){
@@ -214,24 +221,27 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 		toast.show();
 	}
 	
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
+	public void goToActivityFrameLayout(View v) {
+		Log.d(APP_LOG_TAG, "button to go to Frame Layout activity was called");	
+		Intent i = new Intent(this, FrameLayoutActivity.class);
+		startActivity(i);
+		
+	}
+	
+	public void goToActivityCustomFont(View v) {
+		Log.d(APP_LOG_TAG, "button to go to Custom Font activity was called");	
+		Intent i = new Intent(this, CustomFontActivity.class);
+		startActivity(i);
+		
+	}
+	
+	public void goToActivityValidation(View v) {
+		Log.d(APP_LOG_TAG, "button to go to Validation activity was called");	
+		Intent i = new Intent(this, Validation.class);
+		startActivity(i);
+		
 	}
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
 
 
 }

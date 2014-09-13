@@ -31,6 +31,22 @@
             android:name=".WelcomeScreen"
             android:label="@string/title_activity_welcome_screen" >
         </activity>
+        <activity
+            android:name=".JavaActivity"
+            android:label="@string/title_activity_java" >
+        </activity>
+        <activity
+            android:name=".FrameLayoutActivity"
+            android:label="@string/title_activity_frame_layout" >
+        </activity>
+        <activity
+            android:name=".CustomFontActivity"
+            android:label="@string/title_activity_custom_font" >
+        </activity>
+        <activity
+            android:name=".Validation"
+            android:label="@string/title_activity_validation" >
+        </activity>
     </application>
 
 </manifest>

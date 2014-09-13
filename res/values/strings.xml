@@ -13,5 +13,9 @@
     <string name="passwordHint">*****</string>
     <string name="logInButtonStr">Login</string>
     <string name="userSignUpStr">New User -> Sign Up</string>
+    <string name="title_activity_java">JavaActivity</string>
+    <string name="title_activity_frame_layout">FrameLayoutActivity</string>
+    <string name="title_activity_custom_font">CustomFontActivity</string>
+    <string name="title_activity_validation">Validation</string>
 
 </resources>
