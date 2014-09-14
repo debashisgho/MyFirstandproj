@@ -136,29 +136,36 @@
                 android:onClick="goToActivityValidation"
                 android:text="Validation" />
 
+            <Button
+                android:id="@+id/showChkBoxDemoBtn"
+                style="@style/ButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="goToCheckBoxActivity"
+                android:text="CheckBox" />        
+
         </TableRow>
 
         <TableRow
             android:id="@+id/tableRow6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
-
-            <Button
-                android:id="@+id/showChkBoxDemoBtn"
-                style="@style/ButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:onClick="goToCheckBoxActivity"
-                android:text="CheckBox" />
-
-            <Button
-                android:id="@+id/button5"
-                style="@style/ButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="goToToggleBtnActivity"
-                android:text="ToggleBtn" />
+            
+             <Button
+              android:id="@+id/button5"
+              style="@style/ButtonStyle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:onClick="goToToggleBtnActivity"
+              android:text="ToggleBtn" />
+             
+             <Button
+              android:id="@+id/buttonAdpDemo"
+              style="@style/ButtonStyle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:onClick="goToAdapterActivity"
+              android:text="Adapter" />
 
         </TableRow>
 

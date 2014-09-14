@@ -55,6 +55,10 @@
             android:name=".ToggleBtn"
             android:label="@string/title_activity_toggle_btn" >
         </activity>
+        <activity
+            android:name=".Adapter"
+            android:label="@string/title_activity_adapter" >
+        </activity>
     </application>
 
 </manifest>

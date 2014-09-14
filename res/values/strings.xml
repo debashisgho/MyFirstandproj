@@ -19,5 +19,6 @@
     <string name="title_activity_validation">Validation</string>
     <string name="title_activity_check_box">CheckBoxActivity</string>
     <string name="title_activity_toggle_btn">ToggleBtn</string>
+    <string name="title_activity_adapter">Adapter</string>
 
 </resources>
