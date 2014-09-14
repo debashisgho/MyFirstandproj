@@ -17,5 +17,6 @@
     <string name="title_activity_frame_layout">FrameLayoutActivity</string>
     <string name="title_activity_custom_font">CustomFontActivity</string>
     <string name="title_activity_validation">Validation</string>
+    <string name="title_activity_check_box">CheckBoxActivity</string>
 
 </resources>

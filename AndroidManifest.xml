@@ -47,6 +47,10 @@
             android:name=".Validation"
             android:label="@string/title_activity_validation" >
         </activity>
+        <activity
+            android:name=".CheckBoxActivity"
+            android:label="@string/title_activity_check_box" >
+        </activity>
     </application>
 
 </manifest>

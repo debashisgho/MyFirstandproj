@@ -241,6 +241,13 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 		startActivity(i);
 		
 	}
+	
+	public void goToCheckBoxActivity(View v){
+		
+		Log.d(APP_LOG_TAG, "button to go to CheckBox activity was called");	
+		Intent i = new Intent(this, CheckBoxActivity.class);
+		startActivity(i);
+	}
 
 
 
