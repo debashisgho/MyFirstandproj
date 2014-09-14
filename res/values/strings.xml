@@ -18,5 +18,6 @@
     <string name="title_activity_custom_font">CustomFontActivity</string>
     <string name="title_activity_validation">Validation</string>
     <string name="title_activity_check_box">CheckBoxActivity</string>
+    <string name="title_activity_toggle_btn">ToggleBtn</string>
 
 </resources>

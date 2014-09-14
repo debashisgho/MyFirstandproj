@@ -51,6 +51,10 @@
             android:name=".CheckBoxActivity"
             android:label="@string/title_activity_check_box" >
         </activity>
+        <activity
+            android:name=".ToggleBtn"
+            android:label="@string/title_activity_toggle_btn" >
+        </activity>
     </application>
 
 </manifest>

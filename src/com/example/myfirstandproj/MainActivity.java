@@ -248,6 +248,14 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 		Intent i = new Intent(this, CheckBoxActivity.class);
 		startActivity(i);
 	}
+	
+public void goToToggleBtnActivity(View v){
+		
+		Log.d(APP_LOG_TAG, "button to go to ToggleBtn activity was called");	
+		Intent i = new Intent(this, ToggleBtn.class);
+		startActivity(i);
+	}
+	
 
 
 
