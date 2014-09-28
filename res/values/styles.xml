@@ -18,7 +18,7 @@
     </style>
     
     <style name="ButtonStyle">
-        <item name="android:background">@drawable/buttonbackground</item>
+        <item name="android:background">#000000</item>
         <item name="android:textColor">#ffffff</item>
         <item name="android:textSize">20sp</item>
         <item name="android:layout_margin">5dp</item>

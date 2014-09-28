@@ -48,7 +48,7 @@ public class ListViewWithImg extends ActionBarActivity {
 		Context context;
 		String[] titles;
 		String[] desc;
-		int imageId;
+		int imageId;		
 		
 		
 		ListViewWithImgAdapter(Context context, String[] titles, String[] desc, int imageId) {
@@ -62,24 +62,47 @@ public class ListViewWithImg extends ActionBarActivity {
 			Log.d("DGH", "listViewWithImg activity listViewWithImagAdapter constructor finished");
 						
 		}
+		
+		class RowViewHolder{
+			ImageView rowHolderImg;
+			TextView rowHoldertitle;
+			TextView rowHolderdesc;
+			
+			public RowViewHolder(View v) {
+				rowHolderImg = (ImageView) v.findViewById(R.id.listViewWithImg_rowImg);
+				rowHoldertitle = (TextView) v.findViewById(R.id.listViewWithImag_rowTitle);
+				rowHolderdesc = (TextView) v.findViewById(R.id.listViewWithImag_rowDesc);
+			}
+		}
 
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
 			
 			Log.d("DGH", "GETVIEW() method was called for listViewWithImg activity");
 			
-			LayoutInflater inflater = getLayoutInflater();
-			//LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);			
-			View rowView = inflater.inflate(R.layout.listview_with_imgs_sublayout, parent,false);
-			ImageView rowImg = (ImageView) rowView.findViewById(R.id.listViewWithImg_rowImg);
-			TextView rowTitle = (TextView) rowView.findViewById(R.id.listViewWithImag_rowTitle);
-			TextView rowDesc = (TextView) rowView.findViewById(R.id.listViewWithImag_rowDesc);
+			View rowView = convertView;
+			RowViewHolder rowViewHolder =null;
 			
+			if(rowView == null){				
+				LayoutInflater inflater = getLayoutInflater();
+				//LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);			
+				rowView = inflater.inflate(R.layout.listview_with_imgs_sublayout, parent,false);
+				
+				//tag the rowView  - save the holder object  before row is recycled.
+				rowViewHolder = new RowViewHolder(rowView);
+				rowView.setTag(rowViewHolder);
+			}
+			else{
+				Log.d("DGH", "listViewWithImg - object recycling and views to be retrieved from holder object");
+				//get the holder object
+				rowViewHolder = (RowViewHolder) rowView.getTag();
+			}
+		
+				
+			rowViewHolder.rowHolderImg.setImageResource(imageId);
+			rowViewHolder.rowHoldertitle.setText(titles[position]);
+			rowViewHolder.rowHolderdesc.setText(desc[position]);
 			
-			rowImg.setImageResource(imageId);
-			rowTitle.setText(titles[position]);
-			rowDesc.setText(desc[position]);
-			//return super.getView(position, convertView, parent);
 			return rowView;
 		}
 		
