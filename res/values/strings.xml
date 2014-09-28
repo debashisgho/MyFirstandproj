@@ -20,5 +20,27 @@
     <string name="title_activity_check_box">CheckBoxActivity</string>
     <string name="title_activity_toggle_btn">ToggleBtn</string>
     <string name="title_activity_adapter">Adapter</string>
+    <string name="title_activity_inflater_demo">InflaterDemo</string>
+    <string name="title_activity_list_view_with_img">ListViewWithImg</string>
+    
+    <string-array name="listViewWithImg_weekdays">
+        <item >Monday</item>
+        <item >Tuesday</item>
+        <item >Wednesday</item>
+        <item >Thursdday</item>
+        <item >Friday</item>
+        <item >Saturday</item>
+        <item >Sunday</item>
+    </string-array>
+    
+    <string-array name="listViewWithImg_weekdaysDesc">
+        <item >lots of work to be done</item>
+        <item >lots of meeting today</item>
+        <item >mid of the day</item>
+        <item >start working on your weekly target</item>
+        <item >Yahoo.....leave office at 4</item>
+        <item >Enjoy the day and take rest</item>
+        <item >Recharge yourself !! </item>
+    </string-array>
 
 </resources>

@@ -274,5 +274,19 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 		Intent i = new Intent(this, Adapter.class);
 		startActivity(i);
 	}
+	
+	public void goToInflateDemo(View v) {
 
+		Log.d(APP_LOG_TAG, "button to go to Adapter activity was called");
+		Intent i = new Intent(this, InflaterDemo.class);
+		startActivity(i);
+	}
+
+	public void goToListViewWithImg(View v) {
+
+		Log.d(APP_LOG_TAG, "button to go to ListViewWithImag activity was called");
+		Intent i = new Intent(this, ListViewWithImg.class);
+		startActivity(i);
+	}
+	
 }

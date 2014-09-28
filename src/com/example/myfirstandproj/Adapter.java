@@ -44,8 +44,7 @@ public class Adapter extends ActionBarActivity implements OnItemClickListener   
 		//as per layout the view is the textView, adpView is the listView
 		
 		TextView tempTextView = (TextView) rowView;
-		Toast.makeText(this, "you clicked on "+tempTextView.getText()+" index ="+index, Toast.LENGTH_LONG).show();
-		
+		Toast.makeText(this, "you clicked on "+tempTextView.getText()+" index ="+index, Toast.LENGTH_LONG).show();		
 		
 		
 	}

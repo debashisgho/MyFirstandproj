@@ -59,6 +59,14 @@
             android:name=".Adapter"
             android:label="@string/title_activity_adapter" >
         </activity>
+        <activity
+            android:name=".InflaterDemo"
+            android:label="@string/title_activity_inflater_demo" >
+        </activity>
+        <activity
+            android:name=".ListViewWithImg"
+            android:label="@string/title_activity_list_view_with_img" >
+        </activity>
     </application>
 
 </manifest>

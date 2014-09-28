@@ -12,163 +12,211 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.myfirstandproj.MainActivity" >
 
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" >
 
-        <TableRow
-            android:id="@+id/tableRow1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
 
-            <Button
-                android:id="@+id/doSthBtn"
-                style="@style/ButtonStyle"
-                android:onClick="doSomething"
-                android:text="doSth" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
 
-            <Button
-                android:id="@+id/ListenerButton"
-                style="@style/ButtonStyle"
-                android:text="Listener" />
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
 
-            <Button
-                android:id="@+id/anotherActivity"
-                style="@style/ButtonStyle"
-                android:onClick="goToActivityWelcomeScreen"
-                android:text="Welcome" />
-        </TableRow>
+                    <Button
+                        android:id="@+id/doSthBtn"
+                        style="@style/ButtonStyle"
+                        android:onClick="doSomething"
+                        android:text="doSth" />
 
-        <TableRow
-            android:id="@+id/tableRow2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+                    <Button
+                        android:id="@+id/ListenerButton"
+                        style="@style/ButtonStyle"
+                        android:text="Listener" />
+                </TableRow>
 
-            <Button
-                android:id="@+id/viewWebpageButton"
-                style="@style/ButtonStyle"
-                android:onClick="viewWebpage"
-                android:text="webPage" />
+                <TableRow
+                    android:id="@+id/tableRow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
 
-            <Button
-                android:id="@+id/launchMap"
-                style="@style/ButtonStyle"
-                android:onClick="launchMap"
-                android:text="gMap" />
+                    <Button
+                        android:id="@+id/viewWebpageButton"
+                        style="@style/ButtonStyle"
+                        android:onClick="viewWebpage"
+                        android:text="webPage" />
 
-            <Button
-                android:id="@+id/sendEmailButton"
-                style="@style/ButtonStyle"
-                android:onClick="sendEmail"
-                android:text="email" />
-        </TableRow>
+                    <Button
+                        android:id="@+id/launchMap"
+                        style="@style/ButtonStyle"
+                        android:onClick="launchMap"
+                        android:text="gMap" />
+                </TableRow>
 
-        <TableRow
-            android:id="@+id/tableRow3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+                <TableRow
+                    android:id="@+id/tableRow3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
 
-            <Button
-                android:id="@+id/sendImage"
-                style="@style/ButtonStyle"
-                android:onClick="sendImage"
-                android:text="SendImg" />
+                    <Button
+                        android:id="@+id/sendImage"
+                        style="@style/ButtonStyle"
+                        android:onClick="sendImage"
+                        android:text="SendImg" />
 
-            <Button
-                android:id="@+id/SendImages"
-                style="@style/ButtonStyle"
-                android:onClick="sendMultipleImages"
-                android:text="SendImgs" />
+                    <Button
+                        android:id="@+id/SendImages"
+                        style="@style/ButtonStyle"
+                        android:onClick="sendMultipleImages"
+                        android:text="SendImgs" />
+                </TableRow>
 
-            <Button
-                android:id="@+id/showToast"
-                style="@style/ButtonStyle"
-                android:onClick="showToast"
-                android:text="toast" />
-        </TableRow>
+                <TableRow
+                    android:id="@+id/tableRow4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
 
-        <TableRow
-            android:id="@+id/tableRow4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+                    <Button
+                        android:id="@+id/button1"
+                        style="@style/ButtonStyle"
+                        android:onClick="showCustomToast"
+                        android:text="customToast" />
 
-            <Button
-                android:id="@+id/button1"
-                style="@style/ButtonStyle"
-                android:onClick="showCustomToast"
-                android:text="customToast" />
+                    <Button
+                        android:id="@+id/button2"
+                        style="@style/ButtonStyle"
+                        android:onClick="goToJavaActivity"
+                        android:text="javaActivity" />
+                </TableRow>
 
-            <Button
-                android:id="@+id/button2"
-                style="@style/ButtonStyle"
-                android:onClick="goToJavaActivity"
-                android:text="javaActivity" />
+                <TableRow
+                    android:id="@+id/tableRow5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
 
-            <Button
-                android:id="@+id/button3"
-                style="@style/ButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/buttonbackground"
-                android:onClick="goToActivityFrameLayout"
-                android:text="FrameLayout" />
+                    <Button
+                        android:id="@+id/customFontButton"
+                        style="@style/ButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="goToActivityCustomFont"
+                        android:text="customFont" />
 
-        </TableRow>
+                    <Button
+                        android:id="@+id/button4"
+                        style="@style/ButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="goToActivityValidation"
+                        android:text="Validation" />
+                </TableRow>
 
-        <TableRow
-            android:id="@+id/tableRow5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+                <TableRow
+                    android:id="@+id/tableRow6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
 
-            <Button
-                android:id="@+id/customFontButton"
-                style="@style/ButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="goToActivityCustomFont"
-                android:text="customFont" />
+                    <Button
+                        android:id="@+id/button5"
+                        style="@style/ButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="goToToggleBtnActivity"
+                        android:text="ToggleBtn" />
 
-            <Button
-                android:id="@+id/button4"
-                style="@style/ButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="goToActivityValidation"
-                android:text="Validation" />
+                    <Button
+                        android:id="@+id/buttonAdpDemo"
+                        style="@style/ButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="goToAdapterActivity"
+                        android:text="Adapter" />
+                </TableRow>
 
-            <Button
-                android:id="@+id/showChkBoxDemoBtn"
-                style="@style/ButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="goToCheckBoxActivity"
-                android:text="CheckBox" />        
+                <TableRow
+                    android:id="@+id/tableRow7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
 
-        </TableRow>
+                    <Button
+                        android:id="@+id/buttonInflateDemo"
+                        style="@style/ButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="goToInflateDemo"
+                        android:text="Inflate" />
 
-        <TableRow
-            android:id="@+id/tableRow6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-            
-             <Button
-              android:id="@+id/button5"
-              style="@style/ButtonStyle"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:onClick="goToToggleBtnActivity"
-              android:text="ToggleBtn" />
-             
-             <Button
-              android:id="@+id/buttonAdpDemo"
-              style="@style/ButtonStyle"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:onClick="goToAdapterActivity"
-              android:text="Adapter" />
+                    <Button
+                        android:id="@+id/showChkBoxDemoBtn"
+                        style="@style/ButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="goToCheckBoxActivity"
+                        android:text="CheckBox" />
+                </TableRow>
 
-        </TableRow>
+                <TableRow
+                    android:id="@+id/tableRow8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
 
-    </TableLayout>
+                    <Button
+                        android:id="@+id/button3"
+                        style="@style/ButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/buttonbackground"
+                        android:onClick="goToActivityFrameLayout"
+                        android:text="FrameLayout" />
+
+                    <Button
+                        android:id="@+id/showToast"
+                        style="@style/ButtonStyle"
+                        android:onClick="showToast"
+                        android:text="toast" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <Button
+                        android:id="@+id/sendEmailButton"
+                        style="@style/ButtonStyle"
+                        android:onClick="sendEmail"
+                        android:text="email" />
+
+                    <Button
+                        android:id="@+id/anotherActivity"
+                        style="@style/ButtonStyle"
+                        android:onClick="goToActivityWelcomeScreen"
+                        android:text="Welcome" />
+                </TableRow>
+                
+                <TableRow
+                    android:id="@+id/tableRow10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <Button
+                        android:id="@+id/listViewWithImgBtn"
+                        style="@style/ButtonStyle"
+                        android:onClick="goToListViewWithImg"
+                        android:text="ListViewWithImg" />
+
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
